@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "351431855008",
+    "firebase_url": "https://caltrac-99ba6-default-rtdb.firebaseio.com",
+    "project_id": "caltrac-99ba6",
+    "storage_bucket": "caltrac-99ba6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351431855008:android:39909106a6b9dfe7ef72c5",
+        "android_client_info": {
+          "package_name": "com.example.caltrac20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351431855008-vtj04ilgm9nqddr7us49tshmn4t2i550.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzYy3eynKfEc-rcQSPReJiaiqyADa0I4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351431855008-vtj04ilgm9nqddr7us49tshmn4t2i550.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351431855008:android:c90e454574078a5cef72c5",
+        "android_client_info": {
+          "package_name": "com.example.trac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351431855008-vtj04ilgm9nqddr7us49tshmn4t2i550.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzYy3eynKfEc-rcQSPReJiaiqyADa0I4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351431855008-vtj04ilgm9nqddr7us49tshmn4t2i550.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

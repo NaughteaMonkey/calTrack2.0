@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">calTrac2.0</string>
+    <string name="Logout">Logout</string>
+    <string name="Register">Register</string>
+    <string name="Database">Database</string>
+</resources>
