@@ -94,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
     //TEST
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     // DocumentReference docRef = db.collection("test").document("testDB");
+    // and edited firebase DB
 
     public void getDocument() {
         // [START get_document]
