@@ -52,7 +52,7 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="395dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/logPassword"
         android:layout_centerHorizontal="true"
@@ -64,10 +64,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnLogin"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="95dp"
         android:layout_marginBottom="20dp"
         android:text="Register here"
         android:textColor="@color/white"
@@ -79,7 +79,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/logPassword"
         android:onClick="dbButton"
+        android:layout_marginTop="200dp"
         android:text="data" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginStart="90"
+        android:layout_marginTop="20dp"
+        android:text="Don't have an account"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
 </RelativeLayout>
     <!--
     NEW Code: android:onClick="dbButton"
