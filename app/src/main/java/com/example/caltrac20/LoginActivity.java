@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,8 +38,6 @@ public class LoginActivity extends AppCompatActivity {
     TextInputEditText logPassword;
     TextView tvRegister;
     Button btnLogin;
-    //TEST
-    Button btnDB;
 
     FirebaseAuth auth;
 
@@ -61,10 +60,14 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
         });
 
-        //TEST
-        btnDB.setOnClickListener(view -> {;
-            getDocument();
-        });
+    }
+
+    //TEST for database button... edited activity_login.xml
+    // added android:onClick="dbButton" to button android:id="@+id/dbButton"
+    public void dbButton(View view)
+    {
+        Log.d("INSIDE","Inside DB");
+        getDocument();
     }
 
     private void loginUser(){
@@ -89,15 +92,15 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
             });
-            }
         }
-    //TEST
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-    // DocumentReference docRef = db.collection("test").document("testDB");
-    // and edited firebase DB
+    }
 
+    //TEST
+    // DocumentReference docRef = db.collection("test").document("testDB");
     public void getDocument() {
         // [START get_document]
+        auth = FirebaseAuth.getInstance();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference docRef = db.collection("test").document("testDB");
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
