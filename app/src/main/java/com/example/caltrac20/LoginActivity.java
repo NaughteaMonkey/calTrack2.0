@@ -67,7 +67,6 @@ public class LoginActivity extends AppCompatActivity {
     public void dbButton(View view)
     {
         Log.d("INSIDE","Inside DB");
-        getDocument();
     }
 
     private void loginUser(){
@@ -95,31 +94,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
 
-    //TEST
-    // DocumentReference docRef = db.collection("test").document("testDB");
-    public void getDocument() {
-        // [START get_document]
-        auth = FirebaseAuth.getInstance();
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        DocumentReference docRef = db.collection("test").document("testDB");
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        //System.out.println("DocumentSnapshot data: " + document.getData());
-                        Log.d("BRYN", "DocumentSnapshot data: " + document.getData());
-                    } else {
-                        //System.out.println("No such document");
-                        Log.d("BRYN", "No such document");
-                    }
-                } else {
-                    //System.out.println("get failed with " + task.getException());
-                    Log.d("BRYN", "get failed with ", task.getException());
-                }
 
-            }
-        });
-    }
 }
