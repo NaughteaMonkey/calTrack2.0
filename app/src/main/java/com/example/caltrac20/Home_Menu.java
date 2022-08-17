@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public abstract class Home_Menu extends AppCompatActivity {
 
-    Button b;
+
 
     @Override
 
@@ -17,11 +17,11 @@ public abstract class Home_Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_menu);
 
-       // b() = (Button) findViewById(R.id.btnLogin);
+        Intent intent = new Intent(Home_Menu.this, MainActivity.class);
 
-        b.setOnClickListener((v) -> { startActivity(new Intent(Home_Menu.this,MainActivity.class));});
+        startActivity(intent);
 
-
+        finish();
 
     }
 

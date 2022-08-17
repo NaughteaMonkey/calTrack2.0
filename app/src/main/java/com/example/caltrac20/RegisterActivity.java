@@ -27,13 +27,14 @@ public class RegisterActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
 
-
+        Intent intent = getIntent();
         regEmail = findViewById(R.id.regEmail);
         regPassword = findViewById(R.id.regPassword);
         tvLogin = findViewById(R.id.tvLogin);

@@ -38,6 +38,7 @@
         android:layout_height="wrap_content"
         android:text="Welcome to calTrac"
         android:textColor="@color/text"
+        android:textStyle="bold"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
