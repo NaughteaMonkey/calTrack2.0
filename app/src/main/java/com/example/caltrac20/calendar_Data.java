@@ -1,6 +1,5 @@
 package com.example.caltrac20;
 
-import static com.example.caltrac20.LoginActivity.email;
 import static com.example.caltrac20.calendar.clickedDate;
 import static com.example.caltrac20.calendar.dd;
 import static com.example.caltrac20.calendar.mm;
@@ -67,7 +66,7 @@ public class calendar_Data extends AppCompatActivity{
     public void getDocumentTest() {
         // [START get_document]
         auth = FirebaseAuth.getInstance();
-        Log.d("EMAIL", email);
+        //Log.d("EMAIL", email);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference docRef = db.collection("calendar").document("cal");
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
