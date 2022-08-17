@@ -44,8 +44,7 @@ public class calendar_Data extends AppCompatActivity{
         usrData = (EditText)findViewById(R.id.data);
         data = usrData.getText().toString();
         usrData.setText(data);
-        //updateData();
-        getDocument();
+        getDocumentTest();
 
     }
     public void updateButton(View view) // updates data
@@ -54,24 +53,23 @@ public class calendar_Data extends AppCompatActivity{
         data = usrData.getText().toString();
         usrData.setText(data);
         Log.d("Data", data);
-        updateData(mm, dd, yy, data);
-        getDocument();
+        updateDataTest(mm, dd, yy, data);
+        getDocumentTest();
     }
     public void cancelButton(View view) // does not update data
     {
         usrData = (EditText)findViewById(R.id.data);
         usrData.setText(data);
         Log.d("Data", data);
+        getDocumentTest();
     }
 
-    //TEST
-    // DocumentReference docRef = db.collection("test").document("testDB");
-    public void getDocument() {
+    public void getDocumentTest() {
         // [START get_document]
         auth = FirebaseAuth.getInstance();
         Log.d("EMAIL", email);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        DocumentReference docRef = db.collection("userID").document("userCal");
+        DocumentReference docRef = db.collection("calendar").document("cal");
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -93,23 +91,21 @@ public class calendar_Data extends AppCompatActivity{
         });
     }
 
-
-    public void updateData(String month, String day, String year, String data)
+    public void updateDataTest(String month, String day, String year, String data)
     {
         auth = FirebaseAuth.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        DocumentReference docRef = db.collection("userID").document("userCal");
-        docRef.update("userCalendar."+month+".day", day
-                , "userCalendar."+month+".year", year
-        ,"userCalendar."+month+".data", data).addOnSuccessListener(new OnSuccessListener<Void>() {
+        DocumentReference docRef = db.collection("calendar").document("cal");  // gets db from calendar and the document is called cal
+        // where we store into our data... ex 2022 August 12 data = "..."
+        docRef.update("year."+year+".month."+month+".day."+day+".data", data).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                Log.d("Data_Update", "Successfully updated month, day, year, and data");
+                Log.d("Data_Update_Test", "Successfully updated month, day, year, and data");
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Log.d("Data_Update", "Error updating document");
+                Log.d("Data_Update_Test", "Error updating document");
             }
         });
     }
