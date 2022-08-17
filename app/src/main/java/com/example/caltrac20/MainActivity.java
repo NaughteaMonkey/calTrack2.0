@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void btnCalendar(View view) {
+    public void button(View view) {
         startActivity(new Intent(MainActivity.this, calendar.class));
     }
 }
