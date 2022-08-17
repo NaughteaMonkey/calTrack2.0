@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -13,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
     //Button btnLogout;
     FirebaseAuth auth;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         if(user == null) {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
+    }
 
+    public void btnCalendar(View view) {
+        startActivity(new Intent(MainActivity.this, calendar.class));
     }
 }
