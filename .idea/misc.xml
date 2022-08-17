@@ -3,25 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bryng/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_calendar.xml" value="0.22916666666666666" />
+        <entry key="..\:/Users/bryng/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_calendar_data.xml" value="0.22916666666666666" />
         <entry key="..\:/Users/bryng/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/bryng/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/manda/AndroidStudioProjects/calTrack2.0/app/src/main/res/drawable/daily_goals.xml" value="0.2805" />
-        <entry key="..\:/Users/manda/AndroidStudioProjects/calTrack2.0/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2805" />
-        <entry key="..\:/Users/manda/AndroidStudioProjects/calTrack2.0/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.2805" />
-        <entry key="..\:/Users/manda/AndroidStudioProjects/calTrack2.0/app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.2805" />
-        <entry key="..\:/Users/manda/AndroidStudioProjects/calTrack2.0/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2805" />
-        <entry key="..\:/Users/manda/AndroidStudioProjects/calTrack2.0/app/src/main/res/drawable/splash_screen.xml" value="0.1325" />
-        <entry key="..\:/Users/manda/AndroidStudioProjects/calTrack2.0/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/manda/AndroidStudioProjects/calTrack2.0/app/src/main/res/layout/activity_main.xml" value="0.12" />
-        <entry key="..\:/Users/manda/AndroidStudioProjects/calTrack2.0/app/src/main/res/layout/activity_register.xml" value="0.1" />
-        <entry key="..\:/Users/manda/AndroidStudioProjects/calTrack2.0/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
-        <entry key="..\:/Users/manda/AndroidStudioProjects/calTrack2.0/app/src/main/res/layout/home_menu.xml" value="0.22" />
-        <entry key="..\:/Users/manda/AndroidStudioProjects/calTrack2.0/app/src/main/res/menu/buttom_navagation.xml" value="0.18125" />
+        <entry key="..\:/Users/bryng/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_register.xml" value="0.22916666666666666" />
         <entry key="..\:/Users/nstrg/AndroidStudioProjects/calTrac20/app/src/main/res/layout/activity_layout.xml" value="0.16394927536231885" />
         <entry key="..\:/Users/nstrg/AndroidStudioProjects/calTrac20/app/src/main/res/layout/activity_login.xml" value="0.1716485507246377" />
         <entry key="..\:/Users/nstrg/AndroidStudioProjects/calTrac20/app/src/main/res/layout/activity_main.xml" value="0.1716485507246377" />
-        <entry key="..\:/Users/nstrg/OneDrive/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/nstrg/OneDrive/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/nstrg/OneDrive/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_calendar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/nstrg/OneDrive/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_calendar_data.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/nstrg/OneDrive/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_data.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/nstrg/OneDrive/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/nstrg/OneDrive/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/nstrg/OneDrive/Documents/GitHub/calTrack2.0/app/src/main/res/layout/activity_register.xml" value="0.21467391304347827" />
+        <entry key="..\:/Users/nstrg/OneDrive/Documents/GitHub/calTrack2.0/app/src/main/res/layout/home_menu.xml" value="0.2957427536231884" />
       </map>
     </option>
   </component>
