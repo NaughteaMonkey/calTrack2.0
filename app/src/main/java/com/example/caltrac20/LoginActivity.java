@@ -34,6 +34,7 @@ import com.google.firebase.firestore.*;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public static String email = "user@user.com"; // set default email for testing
     TextInputEditText logEmail;
     TextInputEditText logPassword;
     TextView tvRegister;
@@ -71,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser(){
-        String email = logEmail.getText().toString();
+        email = logEmail.getText().toString();
         String password = logPassword.getText().toString();
 
         if(TextUtils.isEmpty(email)){
