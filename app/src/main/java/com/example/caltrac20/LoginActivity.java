@@ -66,16 +66,16 @@ public class LoginActivity extends AppCompatActivity {
         String email = logEmail.getText().toString();
         String password = logPassword.getText().toString();
 
-        if(TextUtils.isEmpty(email)){
+        if(TextUtils.isEmpty(email)){ //User leaves email blank
             logEmail.setError("Missing email");
-            logEmail.requestFocus();
-        }else if (TextUtils.isEmpty(password)){
+            logEmail.requestFocus(); //Input focus aka cursor here
+        }else if (TextUtils.isEmpty(password)){ //User leaves password blank
             logPassword.setError("Missing password");
-            logPassword.requestFocus();
+            logPassword.requestFocus(); //Input focus aka cursor here
         }else{
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
+                public void onComplete(@NonNull Task<AuthResult> task) { //Login user
                     if(task.isSuccessful()){
                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
