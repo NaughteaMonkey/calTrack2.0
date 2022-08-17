@@ -32,6 +32,8 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+
+
         regEmail = findViewById(R.id.regEmail);
         regPassword = findViewById(R.id.regPassword);
         tvLogin = findViewById(R.id.tvLogin);
@@ -49,6 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void createUser(){
+
         String email = regEmail.getText().toString();
         String password = regPassword.getText().toString();
 
