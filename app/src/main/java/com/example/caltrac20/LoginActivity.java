@@ -62,28 +62,20 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    //TEST for database button... edited activity_login.xml
-    // added android:onClick="dbButton" to button android:id="@+id/dbButton"
-    public void dbButton(View view)
-    {
-        Log.d("INSIDE","Inside DB");
-        getDocument();
-    }
-
     private void loginUser(){
         String email = logEmail.getText().toString();
         String password = logPassword.getText().toString();
 
-        if(TextUtils.isEmpty(email)){
+        if(TextUtils.isEmpty(email)){ //User leaves email blank
             logEmail.setError("Missing email");
-            logEmail.requestFocus();
-        }else if (TextUtils.isEmpty(password)){
+            logEmail.requestFocus(); //Input focus aka cursor here
+        }else if (TextUtils.isEmpty(password)){ //User leaves password blank
             logPassword.setError("Missing password");
-            logPassword.requestFocus();
+            logPassword.requestFocus(); //Input focus aka cursor here
         }else{
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
+                public void onComplete(@NonNull Task<AuthResult> task) { //Login user
                     if(task.isSuccessful()){
                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
@@ -94,32 +86,4 @@ public class LoginActivity extends AppCompatActivity {
             });
             }
         }
-
-    //TEST
-    // DocumentReference docRef = db.collection("test").document("testDB");
-    public void getDocument() {
-        // [START get_document]
-        auth = FirebaseAuth.getInstance();
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        DocumentReference docRef = db.collection("test").document("testDB");
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        //System.out.println("DocumentSnapshot data: " + document.getData());
-                        Log.d("BRYN", "DocumentSnapshot data: " + document.getData());
-                    } else {
-                        //System.out.println("No such document");
-                        Log.d("BRYN", "No such document");
-                    }
-                } else {
-                    //System.out.println("get failed with " + task.getException());
-                    Log.d("BRYN", "get failed with ", task.getException());
-                }
-
-            }
-        });
-    }
 }

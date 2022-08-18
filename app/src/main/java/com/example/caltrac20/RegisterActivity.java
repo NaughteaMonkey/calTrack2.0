@@ -56,16 +56,16 @@ public class RegisterActivity extends AppCompatActivity {
         String email = regEmail.getText().toString();
         String password = regPassword.getText().toString();
 
-        if(TextUtils.isEmpty(email)){
+        if(TextUtils.isEmpty(email)){ //User leaves email blank
             regEmail.setError("Missing email");
-            regEmail.requestFocus();
-        }else if (TextUtils.isEmpty(password)){
+            regEmail.requestFocus(); //Input focus aka cursor here
+        }else if (TextUtils.isEmpty(password)){ //User leaves password blank
             regEmail.setError("Missing password");
-            regEmail.requestFocus();
+            regEmail.requestFocus();//Input focus aka cursor here
         }else{
             auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
+                public void onComplete(@NonNull Task<AuthResult> task) { //Add user to database
                     if(task.isSuccessful()){
                         Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(RegisterActivity.this, LoginActivity.class));

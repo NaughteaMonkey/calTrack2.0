@@ -23,16 +23,18 @@
          />
 
     <TextView
+        android:id="@+id/signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/signin"
-        android:text="Sign in"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="calTrac"
         android:textColor="@color/white"
         android:textSize="35dp"
-        android:textStyle="bold"
-        android:layout_margin="50dp"
-        android:gravity="center"
-        />
+        android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/logPassword"
@@ -52,7 +54,7 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="375dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/logPassword"
         android:layout_centerHorizontal="true"
@@ -72,15 +74,6 @@
         android:text="Register here"
         android:textColor="@color/white"
         android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/dbButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/logPassword"
-        android:onClick="dbButton"
-        android:layout_marginTop="200dp"
-        android:text="data" />
 
     <TextView
         android:id="@+id/textView2"
