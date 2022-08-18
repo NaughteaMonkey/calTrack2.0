@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk2"
+    tools:context="com.example.caltrac20.update_activity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Your Weight"
+        android:textColor="@color/white"
+        android:textSize="27dp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/update_progress"
+        android:layout_width="298dp"
+        android:layout_height="431dp"
+        android:layout_alignTop="@+id/update_progress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:progressBackground="@color/purple_700"
+        tools:ignore="NotSibling" />
+
+    <Button
+        android:layout_width="133dp"
+        android:layout_height="41dp"
+        android:layout_below="@+id/update_progress"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="114dp"
+        android:drawableRight="@drawable/ic_baseline_add_24" />
+
+    <Button
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:drawableRight="@drawable/ic_baseline_minimize_24"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="219dp"
+        android:layout_marginBottom="109dp" />
+
+
+</RelativeLayout>
