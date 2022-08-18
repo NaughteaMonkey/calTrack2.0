@@ -14,19 +14,6 @@
         android:textSize="27dp"
         android:textStyle="bold" />
 
-    <ProgressBar
-        android:id="@+id/update_progress"
-        android:layout_width="298dp"
-        android:layout_height="431dp"
-        android:layout_alignTop="@+id/update_progress"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:progressBackground="@color/purple_700"
-        tools:ignore="NotSibling" />
-
     <Button
         android:layout_width="133dp"
         android:layout_height="41dp"
