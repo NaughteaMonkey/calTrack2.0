@@ -11,21 +11,24 @@
         android:id="@+id/title"
         android:layout_width="399dp"
         android:layout_height="71dp"
-        android:text="                 Cal Trac"
-        android:textSize="34dp"
+        android:text="                 calTrack"
+        android:textColor="@color/white"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007" />
+        app:layout_constraintVertical_bias="0.009" />
 
     <TextView
         android:id="@+id/sub_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your Own Journey"
-        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:textSize="22sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="115dp"
         tools:layout_editor_absoluteY="60dp"
@@ -34,15 +37,18 @@
     <Button
         android:id="@+id/goals_button"
         android:layout_width="277dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:background="@color/purple_700"
         android:drawableRight="@drawable/ic_baseline_checklist_rtl_24"
         android:onClick="goalsButtonClicked"
-        android:text="Dail Goals"
-        android:textSize="25dp"
-        tools:ignore="MissingConstraints,OnClick"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="141dp" />
+        android:text="Daily Goals"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/bmr_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub_title"
+        tools:ignore="MissingConstraints,OnClick" />
 
     <Button
         android:id="@+id/bmr_button"
@@ -52,10 +58,14 @@
         android:drawableRight="@drawable/ic_baseline_analytics_24"
         android:onClick="bmrButtonClicked"
         android:text="BMR"
-        android:textSize="26dp"
-        tools:ignore="MissingConstraints,OnClick"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="230dp" />
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/intake_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub_title"
+        app:layout_constraintVertical_bias="0.7"
+        tools:ignore="MissingConstraints,OnClick" />
 
     <Button
         android:id="@+id/intake_button"
@@ -65,23 +75,32 @@
         android:drawableRight="@drawable/ic_baseline_food_bank_24"
         android:onClick="intakeButtonClicked"
         android:text="Calorie Intake"
-        android:textSize="20dp"
-        tools:ignore="MissingConstraints,OnClick"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="326dp" />
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/update_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub_title"
+        app:layout_constraintVertical_bias="0.82"
+        tools:ignore="MissingConstraints,OnClick" />
 
     <Button
         android:id="@+id/update_button"
         android:layout_width="278dp"
         android:layout_height="54dp"
+        android:layout_marginTop="320dp"
         android:background="@color/purple_700"
         android:drawableRight="@drawable/ic_baseline_monitor_weight_24"
         android:onClick="updateButtonClicked"
         android:text="Update"
-        android:textSize="20dp"
-        tools:ignore="MissingConstraints,OnClick"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="424dp" />
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub_title"
+        tools:ignore="MissingConstraints,OnClick" />
 
     <Button
         android:id="@+id/workout_button"
@@ -91,10 +110,15 @@
         android:drawableRight="@drawable/ic_baseline_emoji_people_24"
         android:onClick="intakeButtonClicked"
         android:text="Workouts"
-        android:textSize="20dp"
-        tools:ignore="MissingConstraints,OnClick"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="525dp" />
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_button"
+        app:layout_constraintVertical_bias="0.509"
+        tools:ignore="MissingConstraints,OnClick" />
 
     <Button
         android:id="@+id/btnLogout"
@@ -103,9 +127,12 @@
         android:layout_marginBottom="44dp"
         android:background="@color/purple_700"
         android:text="@string/Logout"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_button"
+        app:layout_constraintVertical_bias="0.948" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
