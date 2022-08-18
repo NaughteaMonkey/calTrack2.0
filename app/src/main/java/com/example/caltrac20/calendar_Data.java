@@ -4,6 +4,7 @@ import static com.example.caltrac20.calendar.clickedDate;
 import static com.example.caltrac20.calendar.dd;
 import static com.example.caltrac20.calendar.mm;
 import static com.example.caltrac20.calendar.yy;
+import static com.example.caltrac20.calendar.day_data;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,7 +28,6 @@ public class calendar_Data extends AppCompatActivity{
 
     TextView selectedDate; // View for selected date
     EditText usrData;
-    String data = "Enter Data"; // where usrData would be stored
     FirebaseAuth auth;
 
     @Override
@@ -35,28 +35,28 @@ public class calendar_Data extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar_data);
 
+        usrData = (EditText)findViewById(R.id.data);
+        usrData.setText(day_data);
+
         selectedDate = (TextView)findViewById(R.id.date);
         selectedDate.setText(clickedDate);
-        usrData = (EditText)findViewById(R.id.data);
-        data = usrData.getText().toString();
-        usrData.setText(data);
-        getDocumentTest();
 
+        getDocumentTest();
     }
     public void updateButton(View view) // updates data
     {
         usrData = (EditText)findViewById(R.id.data);
-        data = usrData.getText().toString();
-        usrData.setText(data);
-        Log.d("Data", data);
-        updateDataTest(mm, dd, yy, data);
+        day_data = usrData.getText().toString();
+        usrData.setText(day_data);
+        Log.d("Data", day_data);
+        updateDataTest(mm, dd, yy, day_data);
         getDocumentTest();
     }
     public void cancelButton(View view) // does not update data
     {
         usrData = (EditText)findViewById(R.id.data);
-        usrData.setText(data);
-        Log.d("Data", data);
+        usrData.setText(day_data);
+        Log.d("Data", day_data);
         getDocumentTest();
     }
 
