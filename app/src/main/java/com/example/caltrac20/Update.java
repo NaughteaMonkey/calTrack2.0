@@ -18,18 +18,8 @@ public class Update extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        update = findViewById(R.id.update_button);
-
-        update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(Update.this,update_activity.class);
-
-                startActivity(intent);
-            }
-        });
     }
 
-    }
+
+
+}
