@@ -10,7 +10,7 @@ public class bmr_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.goal);
+        setContentView(R.layout.bmr_activity);
 
         Intent intent = getIntent();
 }}

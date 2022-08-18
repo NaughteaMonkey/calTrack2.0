@@ -13,7 +13,7 @@ public class calorie_activity extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.calorie_activty);
 
         Intent intent = getIntent();
 
