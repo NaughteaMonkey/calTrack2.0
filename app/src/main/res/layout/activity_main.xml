@@ -1,310 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk2"
+    tools:context=".MainActivity">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="399dp"
+        android:layout_height="71dp"
+        android:text="                 Cal Trac"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
 
-            android:layout_width="417dp"
-            android:layout_height="44dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="684dp"
-            android:background="@color/background"
-            app:itemTextColor="@color/white"
-            app:layout_constraintTop_toTopOf="@+id/scrollView2"
-            app:menu="@menu/buttom_navagation"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="-6dp">
+    <TextView
+        android:id="@+id/sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Own Journey"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="60dp"
+        tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/goals_button"
+        android:layout_width="277dp"
+        android:layout_height="47dp"
+        android:background="@color/purple_700"
+        android:drawableRight="@drawable/ic_baseline_checklist_rtl_24"
+        android:onClick="goalsButtonClicked"
+        android:text="Dail Goals"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="141dp" />
 
+    <Button
+        android:id="@+id/bmr_button"
+        android:layout_width="275dp"
+        android:layout_height="49dp"
+        android:background="@color/purple_700"
+        android:drawableRight="@drawable/ic_baseline_analytics_24"
+        android:onClick="bmrButtonClicked"
+        android:text="BMR"
+        android:textSize="26dp"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="230dp" />
 
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    <Button
+        android:id="@+id/intake_button"
+        android:layout_width="278dp"
+        android:layout_height="54dp"
+        android:background="@color/purple_700"
+        android:drawableRight="@drawable/ic_baseline_food_bank_24"
+        android:onClick="intakeButtonClicked"
+        android:text="Calorie Intake"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="326dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/background"
-        android:padding="5dp"
-        tools:ignore="MissingConstraints"
-        android:orientation="horizontal">
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="278dp"
+        android:layout_height="54dp"
+        android:background="@color/purple_700"
+        android:drawableRight="@drawable/ic_baseline_monitor_weight_24"
+        android:onClick="updateButtonClicked"
+        android:text="Update"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="424dp" />
 
+    <Button
+        android:id="@+id/workout_button"
+        android:layout_width="278dp"
+        android:layout_height="54dp"
+        android:background="@color/purple_700"
+        android:drawableRight="@drawable/ic_baseline_emoji_people_24"
+        android:onClick="intakeButtonClicked"
+        android:text="Workouts"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints,OnClick"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="525dp" />
 
-        <Button
-            android:id="@+id/btnLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Logout"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20sp"
-            android:layout_marginLeft="20dp"
-            android:fontFamily="sans-serif-black"
-            android:text="calTracker"
-            android:textColor="@color/text_color"
-            android:textSize="25sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="Your Own Journey"
-            android:textColor="@color/text_color"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-
-    </LinearLayout>
-
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-3dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-
-                android:layout_width="380dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/daily_goals"
-                android:orientation="horizontal"
-                android:padding="2dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Daily Goals"
-                        android:textColor="@color/white"
-                        android:textSize="23sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="248dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:text="Keep Track of Your Calories,
-                        Water Intake, and Steps"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginRight="90dp"
-                    android:padding="8dp"
-                    android:src="@drawable/daily" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="380dp"
-                android:layout_height="99dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/daily_goals"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:text="BMR"
-                        android:textColor="@color/white"
-                        android:textSize="23sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="248dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:text="Basal Metabolic Rate Calculator"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginRight="90dp"
-                    android:padding="8dp"
-                    android:src="@drawable/bmr" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="380dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/daily_goals"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Calorie Intake"
-                        android:textColor="@color/white"
-                        android:textSize="23sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="248dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:text="Input and Store name and Calories of Food Consumed"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginRight="90dp"
-                    android:padding="8dp"
-                    android:src="@drawable/food" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="380dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/daily_goals"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Update"
-                        android:textColor="@color/white"
-                        android:textSize="23sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="248dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:text="Weight"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginRight="90dp"
-                    android:padding="8dp"
-                    android:src="@drawable/weight" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="380dp"
-                android:layout_height="91dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/daily_goals"
-                android:orientation="horizontal"
-                android:padding="3dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Workouts"
-                        android:textColor="@color/white"
-                        android:textSize="23sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="248dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:text="sync with calender"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="90dp"
-                    android:padding="8dp"
-                    android:src="@drawable/workingout" />
-
-
-            </LinearLayout>
-        </LinearLayout>
-
-
-    </ScrollView>
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:background="@color/purple_700"
+        android:text="@string/Logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
