@@ -16,11 +16,9 @@
         android:theme="@style/Theme.CalTrac20"
         tools:targetApi="31">
         <activity
-            android:name=".calendar_Data"
+            android:name=".splash_screen"
             android:exported="true" />
-        <activity
-            android:name=".calendar"
-            android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true" />
@@ -31,13 +29,24 @@
             android:name=".DB_Test"
             android:exported="true" />
         <activity
+            android:name=".Home_Menu"
+            android:exported="true"/>
+        <activity
+            android:name=".calendar"
+            android:exported="true"/>
+        <activity
+            android:name=".calendar_Data"
+            android:exported="true"/>
+        <activity
             android:name=".RegisterActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 
