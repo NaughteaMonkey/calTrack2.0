@@ -31,8 +31,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
     }
-
+/*
     public void button(View view) {
         startActivity(new Intent(MainActivity.this, calendar.class));
     }
+ */
+    public void updateButtonClicked(View view) {
+        startActivity(new Intent(MainActivity.this, calendar.class));
+    }
+
+
 }

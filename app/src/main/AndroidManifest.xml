@@ -38,6 +38,36 @@
             android:name=".calendar_Data"
             android:exported="true"/>
         <activity
+            android:name=".BMR"
+            android:exported="true"/>
+        <activity
+            android:name=".bmr_activity"
+            android:exported="true"/>
+        <activity
+            android:name=".calorie"
+            android:exported="true"/>
+        <activity
+            android:name=".calorie_activity"
+            android:exported="true"/>
+        <activity
+            android:name=".Daily_goals"
+            android:exported="true"/>
+        <activity
+            android:name=".goal"
+            android:exported="true"/>
+        <activity
+            android:name=".Update"
+            android:exported="true"/>
+        <activity
+            android:name=".update_activity"
+            android:exported="true"/>
+        <activity
+            android:name=".Workout"
+            android:exported="true"/>
+        <activity
+            android:name=".workout_activty"
+            android:exported="true"/>
+        <activity
             android:name=".RegisterActivity"
             android:exported="true">
 
@@ -48,6 +78,7 @@
             </intent-filter>
 
         </activity>
+
     </application>
 
 </manifest>

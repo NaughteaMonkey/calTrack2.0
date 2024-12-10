@@ -59,7 +59,10 @@
         android:layout_below="@id/logPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Login" />
+        android:background="#8E6FC6"
+        android:text="Login"
+        android:textColor="@color/white"
+        />
 
     <TextView
         android:id="@+id/tvRegister"

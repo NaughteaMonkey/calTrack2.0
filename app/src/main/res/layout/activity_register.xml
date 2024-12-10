@@ -57,9 +57,9 @@
         android:layout_below="@id/regPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="@string/Register"
-
-        />
+        android:background="#8E6FC6"
+        android:textColor="@color/white"
+        android:text="@string/Register" />
 
     <TextView
         android:id="@+id/tvLogin"
